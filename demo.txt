@@ -1,1 +1,199 @@
 Welcome to Git Hub shine
+
+CTS+2431261@LTIN649353 MINGW64 ~
+$ pwd
+/c/Users/2431261
+
+CTS+2431261@LTIN649353 MINGW64 ~
+$
+
+CTS+2431261@LTIN649353 MINGW64 ~
+$ mkdir git_practice
+
+CTS+2431261@LTIN649353 MINGW64 ~
+$ cd git_practice/
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice
+$ git init
+Initialized empty Git repository in C:/Users/2431261/git_practice/.git/
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ touch demo.txt
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        demo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git add demo.txt
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   demo.txt
+
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   demo.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   demo.txt
+
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git add demo.txt
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   demo.txt
+
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git commit -m "first commit"
+[master (root-commit) 66f73e3] first commit
+ Committer: S <2431261@cognizant.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 demo.txt
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git log
+commit 66f73e34d884383d6bdeab382bb1167067f703c8 (HEAD -> master)
+Author: S <2431261@cognizant.com>
+Date:   Wed Jul 30 10:45:15 2025 +0530
+
+    first commit
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git config --global user.email "christoberlawrance@gmail.com"
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git config --global user.name "Christober Lawrance S"
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git log
+commit 66f73e34d884383d6bdeab382bb1167067f703c8 (HEAD -> master)
+Author: S <2431261@cognizant.com>
+Date:   Wed Jul 30 10:45:15 2025 +0530
+
+    first commit
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git log
+commit 66f73e34d884383d6bdeab382bb1167067f703c8 (HEAD -> master)
+Author: S <2431261@cognizant.com>
+Date:   Wed Jul 30 10:45:15 2025 +0530
+
+    first commit
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   demo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git add demo.txt
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   demo.txt
+
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git commit -m "second commit"
+[master f6b763a] second commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git log
+commit f6b763a1648a51fdd851ee142d7ef71180be407c (HEAD -> master)
+Author: Christober Lawrance S <christoberlawrance@gmail.com>
+Date:   Wed Jul 30 10:50:56 2025 +0530
+
+    second commit
+
+commit 66f73e34d884383d6bdeab382bb1167067f703c8
+Author: S <2431261@cognizant.com>
+Date:   Wed Jul 30 10:45:15 2025 +0530
+
+    first commit
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git branch
+* master
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git branch demo_branch
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git branch
+  demo_branch
+* master
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (master)
+$ git checkout demo_branch
+M       demo.txt
+Switched to branch 'demo_branch'
+
+CTS+2431261@LTIN649353 MINGW64 ~/git_practice (demo_branch)
+$ git branch
+* demo_branch
+  master
+
